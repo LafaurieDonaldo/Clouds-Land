@@ -16,7 +16,7 @@ function setup() {
 /*
 All of the code inside of the DRAW() function runs multiple times per second (usually 60 times per second on most computers).
 */
-function draw() {
+function draw() {{
   //putting the backround function here means there is a fresh screen drawn each time. This is needed if you want to make things look like they're moving across the screen
   background('lightblue'); 
   
@@ -50,8 +50,27 @@ fill(shapeColor);
   ellipse(400, 75, 80, 80);
   ellipse(450, 35, 80, 80);
   ellipse(500, 75, 80, 80);
+
+  // square shape 
+
+  if((keyIsPressed == true) && (key=='a')){
+    moveAmount = -3; //negative number moves to left
+  }else if((keyIsPressed == true) && (key=='d')){
+    moveAmount = 3; //positive number moves to right
+  }else{
+    moveAmount= 0;
+  }
+  
+  xPosSquare = xPosSquare + moveAmount;
+  //create a square
+fill('Orange')
+  circle(xPosSquare,460,80,55,55);
   
 }
+  
+}
+// END DRAW
+
 
 function mouseMoved(){
 
