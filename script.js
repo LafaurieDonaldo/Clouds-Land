@@ -35,7 +35,7 @@ ellipse(25, 25, 130, 130); // Draw sun circle
   
 //LAND
 fill('green')
-rect(0, 400, 1000, 55);
+rect(0, 500, 1000, 400);
   
 describe('white rect with black outline in mid-right of canvas');
 
